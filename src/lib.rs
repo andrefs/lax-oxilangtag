@@ -647,11 +647,11 @@ fn parse_langtag(
                 kind: TagParseErrorKind::EmptySubtag,
             });
         }
-        if subtag.len() > 8 {
-            return Err(LanguageTagParseError {
-                kind: TagParseErrorKind::SubtagTooLong,
-            });
-        }
+        //if subtag.len() > 8 {
+        //    return Err(LanguageTagParseError {
+        //        kind: TagParseErrorKind::SubtagTooLong,
+        //    });
+        //}
         if state == State::Start {
             // Primary language
             if subtag.len() < 2 || !is_alphabetic(subtag) {
